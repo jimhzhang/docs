@@ -10,6 +10,8 @@ CodeCC（代码检查中心）提供专业的代码检查解决方案，检查�
 <tr>
   <td>**维度**</td><td>**类别**</td><td>**工具示例**</td><td>**规则示例**</td>
   </tr>
+  <tdrowspan="3">**代码问题**</td><td>**发现代码缺陷**</td><td><p>Clang、Clangwarning、SpotBugs</p><p>**预计22年下半年可用：**</p><p>bkcheck-cpp</p><p>**需要使用自行采买License**：Coverity、KLOCWORK</p></td><td>API使用、内存非法访问、程序卡死、资源泄露、空指针、性能低效……</td>
+  </tr>
 </tbody>
 </table>
   
