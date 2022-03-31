@@ -83,6 +83,7 @@ table th:nth-of-type(3) {
     width: 8em;
 }
 </style>
+
 |**维度**|**工具**|**工具ID**|**支持语言**|**License 类型**|**CodeCC交付后立即可用**|**工具介绍**|
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 |**发现代码缺陷**|Coverity|COVERITY| <img width=30/>C/C++,JAVA,C#,JS,OC/OC++,Python,PHP,Ruby,Golang,Swift,TS|商业|否|斯坦福大学科学家研究成果，被第三方权威调查机构VDC评为静态源代码分析领域的领导者。|
