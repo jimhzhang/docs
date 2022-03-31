@@ -1,4 +1,4 @@
-﻿**CodeCC介绍文档 - 二方版**
+**CodeCC介绍文档 - 二方版**
 # **CodeCC简介**
 代码检查，一般又称为静态代码分析，是指无需运行被测代码，仅通过分析或检查源程序的语法、结构、过程、接口等来检查程序的正确性，找出代码隐藏的错误和缺陷，如内存泄漏，空指针引用，死代码，变量未初始化，复制粘贴错误，重复代码，函数复杂度过高等等。
 
@@ -8,21 +8,53 @@ CodeCC（代码检查中心）提供专业的代码检查解决方案，检查�
 
 <table><tbody>
 <tr>
-  <td>**维度**</td><td>**类别**</td><td>**工具示例**</td><td>**规则示例**</td>
+  <td><b>维度</td>
+<td><b>类别</td>
+<td><b>工具示例</td>
+<td><b>规则示例</td>
   </tr>
-  <tdrowspan="3">**代码问题**</td><td>**发现代码缺陷**</td><td><p>Clang、Clangwarning、SpotBugs</p><p>**预计22年下半年可用：**</p><p>bkcheck-cpp</p><p>**需要使用自行采买License**：Coverity、KLOCWORK</p></td><td>API使用、内存非法访问、程序卡死、资源泄露、空指针、性能低效……</td>
-  </tr>
+  <td rowspan="3"><b>代码问题<b></td>
+<td><b>发现代码缺陷</td>
+<td>
+<p>Clang、Clangwarning、SpotBugs</p>
+<p><b>预计22年下半年可用：</b></p>
+<p>bkcheck-cpp</p>
+<p><b>需要使用自行采买License：</b></p> Coverity、KLOCWORK</p></td>
+<td>API使用、内存非法访问、程序卡死、资源泄露、空指针、性能低效……</td>
+</tr>
+<tr>
+<td><b>发现安全漏洞</b></td>
+<td><p>啄木鸟敏感信息工具</p><p></p><p><b>需要使用自行采买License：</b></p><p>CheckMarx</p></td>
+<td>凭证泄露、不和谐内容、员工信息泄露等等，支持任意文本内容，不局限于特定编程语言范围</td>
+</tr>
+<tr>
+<td><b>代码规范，检查一些逻辑错误</b></td>
+<td><p>CppLint、CheckStyle、ESLint、StyleCop、Gometalinter、detekt、PHPCS、PyLint、OCCheck、Clangwarning、</p><p><b>预计22年下半年可用：</b>bkcheck-oc、bkcheck-cpp</p><p></p>
+<td>注释、空代码块、异常处理、命名、格式化、风格……</td>
+</tr>
+<tr>
+<td><b>复杂度</b></td>
+<td><b>控制复杂度</td>
+<td>圈复杂度</td>
+<td>函数圈复杂度>=20</td>
+</tr>
+<tr>
+<td><b>重复代码</b></td>
+<td><b>检测重复率</td>
+<td>重复率</td>
+<td>文件代码重复率>=5%</td>
+</tr>
+<tr>
+<td><b>代码统计</b></td>
+<td><b>统计代码行数</td>
+<td>代码统计（CLOC）</td>
+<td>统计代码中各类语言代码行、注释行、空白行的情况</td>
+</tr>
+
 </tbody>
 </table>
   
-|**维度**|**类别**|**工具示例**|**规则示例**|
-| :- | :- | :- | :- |
-|**代码问题**|**发现代码缺陷**|<p>Clang、Clangwarning、SpotBugs</p><p>**预计22年下半年可用：**</p><p>bkcheck-cpp</p><p>**需要使用自行采买License**：Coverity、KLOCWORK</p>|API使用、内存非法访问、程序卡死、资源泄露、空指针、性能低效……|
-||**发现安全漏洞**|<p>啄木鸟敏感信息工具</p><p></p><p>**需要使用自行采买License**：</p><p>CheckMarx</p>|凭证泄露、不和谐内容、员工信息泄露等等，支持任意文本内容，不局限于特定编程语言范围|
-||**代码规范，检查一些逻辑错误**|<p>CppLint、CheckStyle、ESLint、StyleCop、Gometalinter、detekt、PHPCS、PyLint、OCCheck、Clangwarning、</p><p>**预计22年下半年可用：**bkcheck-oc、bkcheck-cpp</p><p></p>|注释、空代码块、异常处理、命名、格式化、风格……|
-|**复杂度**|**控制复杂度**|圈复杂度|函数圈复杂度>=20|
-|**重复代码**|**检测重复率**|重复率|文件代码重复率>=5%|
-|**代码统计**|**统计代码行数**|代码统计（CLOC）|统计代码中各类语言代码行、注释行、空白行的情况|
+
 # **CodeCC的特色功能**
 **支持五大检查维度：**
 
@@ -81,28 +113,200 @@ A：我们将在22年下半年提供“自定义上架工具”满足该需求�
 
 # **附录：各工具详细介绍**
 
-|**维度**|**工具**|**工具ID**|**支持语言**|**License 类型**|**CodeCC交付后立即可用**|**工具介绍**|
-| :- | :- | :- | :- | :- | :- | :- |
-|**发现代码缺陷**|Coverity|COVERITY|<talbe width=60/>C/C++,JAVA,C#,JS,<br>OC/OC++,Python,PHP,<br>Ruby,Golang,Swift,TS|商业|否|斯坦福大学科学家研究成果，被第三方权威调查机构VDC评为静态源代码分析领域的领导者。|
-||Klocwork|KLOCWORK|C/C++,JAVA|商业|否|业界广泛使用的商用代码检查工具，可与Coverity互为补充，通过覆盖更多的逻辑路径，能更全面地扫描空指针、内存泄漏、越界溢出等问题。|
-||PVS-Studio|PVS|c++|商业|否|能够进行综合的静态分析(包括各类缺陷和安全漏洞)，并避免带干扰性的结果，能够与多种IDE集成。其卓越的静态分析技术能够覆盖一般动态测试才能实现的功能，从而把缺陷的发现提早到了第0时间。大大减少了缺陷管理的成本，缩短了周期。PVS-Studio提供的静态分析技术能够发现代码的指针问题、数组越界问题、内存使用问题、编码规则违反的问题|
-||Clang|CLANG|OC/OC++|　|是|Clang静态检查工具是Clang编译器下的一款代码检查工具，可以通过推理代码的语义，在项目编译的过程中扫描出项目中存在的bug，例如空指针、API错误使用、无效代码、安全问题等。目前支持84种问题类型。|
-||Clangwarning|CLANGWARNING|OC/OC++||是||
-||bkcheck-cpp|BKCHECK-CPP|C/C++|即将开源|否|<p>基于原始的BKCHECK进行新一轮改造，增加多语言扩展支持，实现深度抽象语法树解析、控制流分析等静态分析基础组件。</p><p>目前支持C/C++，新增超过13例新规则，包含空指针检查、逻辑缺陷、代码风格等多种类型。</p><p></p>|
-|**发现代码漏洞**|啄木鸟敏感信息工具|WOODPECKER\_SENSITIVE|所有语言|腾讯自研|是|由TEG安全平台部打造的工具，覆盖认证凭证泄露、不和谐内容、员工信息泄露等等，支持任意文本内容，不局限于特定编程语言范围。|
-||CheckMarx|CODEAUDIT|JAVA,Golang,JS,Python,PHP,TS|商业|否|　|
-|**检查代码规范**|CppLint|CPPLINT|C/C++|开源|是|谷歌开源的C++代码风格检查工具，可确保C++代码符合谷歌编码规范，并能检查语法错误。|
-||CheckStyle|CHECKSTYLE|Java|开源|是|用于检查Java源代码是否符合编码规范。它可以找到类和方法设计问题，还能够检查代码布局和格式问题。|
-||ESLint|ESLINT|JS|开源|是|开源的   JavaScript 代码检查工具，可以在开发阶段发现代码问题，支持最新的ES6语法标准，支持前端框架Vue和React等。|
-||StyleCop|STYLECOP|C#|开源|是|微软的开源静态代码分析工具，它检查C＃代码是否符合StyleCop推荐的编码样式和Microsoft   .NET Framework设计指南。|
-||Gometalinter|GOML|Golang|开源|是|一款开源的   Golang 代码检查工具，支持检查代码规范、死代码、语法错误和安全漏洞等问题。|
-||detekt|DETEKT|kotlin|开源|是|Kotlin语言代码分析工具，除了能扫出编码的风格规范问题之外，还能检查出代码的复杂度、某些潜在逻辑错误以及性能问题，告警类型多达152种。|
-||PHPCS|PHPCS|php|开源|是|PHP\_CodeSniffer用于检查PHP的编码规范。PHPCS支持包括PEAR、PSR-1、PSR-2、PSR-12等5类代码规范标准，涵盖257种告警类型。|
-||PyLint|PYLINT|python|开源|是|Python代码风格检查工具，可检查代码行的长度、变量命名是否符合编码规范或声明的接口是否被真正的实现等。|
-||bkcheck-cpp|BKCHECK-CPP|C/C++|即将开源|否|<p>基于原始的BKCHECK进行新一轮改造，增加多语言扩展支持，实现深度抽象语法树解析、控制流分析等静态分析基础组件。</p><p>目前支持C/C++，新增超过13例新规则，包含空指针检查、逻辑缺陷、代码风格等多种类型。</p><p></p>|
-||bkcheck-oc|BKCHECK-OC|OC/OC++|即将开源|否|　|
-||ClangWarning|CLANGWARNING|OC/OC++|开源|是|　|
-|**控制复杂度**|圈复杂度|CCN|JAVA,C#,Golang,C/C++,OC/OC++,JS,PHP,Ruby,Python,Swift,LUA|开源　|是|通过计算函数的节点个数来衡量代码复杂性。复杂度越高代码存在缺陷的风险越大。|
-|**检测重复代码**|重复率|DUPC|Golang,JAVA,C#,C/C++,OC/OC++,JS,Kotlin,Python|开源　|是|可以检测项目中复制粘贴和重复开发相同功能等问题，帮助开发者发现冗余代码，以便代码抽象和重构。|
-|**统计代码行数**|代码统计|CLOC|支持所有语言|开源　　|是|统计代码中各类语言代码行、注释行、空白行的情况。|
+<table><tbody>
+<tr>
+  <td><b>维度</td>
+<td><b>工具</td>
+<td><b>工具ID</td>
+<td><b>支持语言</td>
+<td><b>License类型</td>
+<td><b>CodeCC交付后立即可用</td>
+<td><b>工具介绍</td>
+</tr>
+<tr>
+<td rowspan="6"><b>发现代码缺陷</td>
+<td><b>Coverity</td>
+<td>COVERITY</td>
+<td>C/C++,JAVA,C#,JS,<br>OC/OC++,Python,PHP,<br>Ruby,Golang,Swift,TS</td>
+<td>商业</td>
+<td>否</td>
+<td>斯坦福大学科学家研究成果，被第三方权威调查机构VDC评为静态源代码分析领域的领导者。</td> 
+</tr>
+<tr>
+<td><b>Klocwork</td>
+<td>KLOCWORK</td>
+<td>C/C++,JAVA</td>
+<td>商业</td>
+<td>否</td>
+<td>业界广泛使用的商用代码检查工具，可与Coverity互为补充，通过覆盖更多的逻辑路径，能更全面地扫描空指针、内存泄漏、越界溢出等问题。</td>
+</tr>
+<tr>
+<td><b>PVS-Studio</td>
+<td>PVS</td>
+<td>C++</td>
+<td>商业</td>
+<td>否</td>
+<td>能够进行综合的静态分析(包括各类缺陷和安全漏洞)，并避免带干扰性的结果，能够与多种IDE集成。其卓越的静态分析技术能够覆盖一般动态测试才能实现的功能，从而把缺陷的发现提早到了第0时间。大大减少了缺陷管理的成本，缩短了周期。PVS-Studio提供的静态分析技术能够发现代码的指针问题、数组越界问题、内存使用问题、编码规则违反的问题</td> 
+</tr>
+<tr>
+<td><b>Clang</td>
+<td>CLANG</td>
+<td>OC/OC++</td>
+<td></td>
+<td>是</td>
+<td>Clang静态检查工具是Clang编译器下的一款代码检查工具，可以通过推理代码的语义，在项目编译的过程中扫描出项目中存在的bug，例如空指针、API错误使用、无效代码、安全问题等。目前支持84种问题类型。</td>
+</tr>
+<tr>
+<td><b>Clangwarning</td>
+<td>CLANGWARNING</td>
+<td>OC/OC++</td>
+<td></td>
+<td>是</td>
+<td></td>
+</tr>
+<tr>
+<td><b>bkcheck-cpp</td>
+<td>BKCHECK-CPP</td>
+<td>C/C++</td>
+<td>即将开源</td>
+<td>否</td>
+<td><p>基于原始的BKCHECK进行新一轮改造，增加多语言扩展支持，实现深度抽象语法树解析、控制流分析等静态分析基础组件。</p><p>目前支持C/C++，新增超过13例新规则，包含空指针检查、逻辑缺陷、代码风格等多种类型。</p><p></p></td>
+</tr>
+<tr>
+<td rowspan="2"><b>发现代码缺陷</td>
+<td><b>啄木鸟敏感信息工具</td>
+<td>WOODPECKER\_SENSITIVE</td>
+<td>所有语言</td>
+<td>腾讯自研</td>
+<td>是</td>
+<td><p>由TEG安全平台部打造的工具，覆盖认证凭证泄露、不和谐内容、员工信息泄露等等，支持任意文本内容，不局限于特定编程语言范围。</p><p></p></td>
+</tr>
+<tr>
+<td><b>CheckMarx</td>
+<td>CODEAUDIT</td>
+<td>JAVA,Golang,JS,<br>Python,PHP,TS</td>
+<td>商业</td>
+<td>否</td>
+<td><p></td>
+</tr>
+<tr>
+<td rowspan="11"><b>检查代码规范</td>
+<td><b>CppLint</td>
+<td>CPPLINT</td>
+<td>C/C++</td>
+<td>开源</td>
+<td>是</td>
+<td><p>谷歌开源的C++代码风格检查工具，可确保C++代码符合谷歌编码规范，并能检查语法错误。</p><p></p></td>
+</tr>
+<tr>
+<td><b>CheckStyle</td>
+<td>CHECKSTYLE</td>
+<td>JAVA</td>
+<td>开源</td>
+<td>是</td>
+<td>用于检查Java源代码是否符合编码规范。它可以找到类和方法设计问题，还能够检查代码布局和格式问题。</td>
+</tr>
+<tr>
+<td><b>ESLint</td>
+<td>ESLINT</td>
+<td>JS</td>
+<td>开源</td>
+<td>是</td>
+<td>开源的JavaScript 代码检查工具，可以在开发阶段发现代码问题，支持最新的ES6语法标准，支持前端框架Vue和React等。</td>
+</tr>
+<tr>
+<td><b>StyleCop</td>
+<td>STYLECOP</td>
+<td>C#</td>
+<td>开源</td>
+<td>是</td>
+<td>微软的开源静态代码分析工具，它检查C＃代码是否符合StyleCop推荐的编码样式和Microsoft.NET Framework设计指南。</td>
+</tr>
+<tr>
+<td><b>Gometalinter</td>
+<td>GOML</td>
+<td>Golang</td>
+<td>开源</td>
+<td>是</td>
+<td>一款开源的Golang 代码检查工具，支持检查代码规范、死代码、语法错误和安全漏洞等问题。</td>
+</tr>
+<tr>
+<td><b>detekt</td>
+<td>DETEKT</td>
+<td>kotlin</td>
+<td>开源</td>
+<td>是</td>
+<td>Kotlin语言代码分析工具，除了能扫出编码的风格规范问题之外，还能检查出代码的复杂度、某些潜在逻辑错误以及性能问题，告警类型多达152种。</td>
+</tr>
+<tr>
+<td><b>PHPCS</td>
+<td>PHPCS</td>
+<td>php</td>
+<td>开源</td>
+<td>是</td>
+<td>PHP\_CodeSniffer用于检查PHP的编码规范。PHPCS支持包括PEAR、PSR-1、PSR-2、PSR-12等5类代码规范标准，涵盖257种告警类型。</td>
+</tr>
+<tr>
+<td><b>PyLint</td>
+<td>PYLINT</td>
+<td>python</td>
+<td>开源</td>
+<td>是</td>
+<td>Python代码风格检查工具，可检查代码行的长度、变量命名是否符合编码规范或声明的接口是否被真正的实现等。</td>
+</tr>
+<tr>
+<td><b>bkcheck-cpp</td>
+<td>BKCHECK-CPP</td>
+<td>C/C++</td>
+<td>即将开源</td>
+<td>否</td>
+<td><p>基于原始的BKCHECK进行新一轮改造，增加多语言扩展支持，实现深度抽象语法树解析、控制流分析等静态分析基础组件。</p><p>目前支持C/C++，新增超过13例新规则，包含空指针检查、逻辑缺陷、代码风格等多种类型。</p><p></p></td>
+</tr>
+<tr>
+<td><b>bkcheck-oc</td>
+<td>BKCHECK-OC</td>
+<td>OC/OC++</td>
+<td>即将开源</td>
+<td>否</td>
+<td><p></td>
+</tr>
+<tr>
+<td><b>ClangWarning</td>
+<td>CLANGWARNING</td>
+<td>OC/OC++</td>
+<td>开源</td>
+<td>是</td>
+<td><p></td>
+</tr>
+<tr>
+<td><b>控制复杂度</td>
+<td><b>圈复杂度</td>
+<td>CCN</td>
+<td>JAVA,C#,Golang,C/C++,<br>OC/OC++,JS,PHP,Ruby,<br>Python,Swift,LUA</td>
+<td>开源</td>
+<td>是</td>
+<td><p>通过计算函数的节点个数来衡量代码复杂性。复杂度越高代码存在缺陷的风险越大。</p><p></p></td>
+</tr>
+<tr>
+<td><b>检测重复代码</td>
+<td><b>重复率</td>
+<td>DUPC</td>
+<td>Golang,JAVA,C#,<br>C/C++,OC/OC++,JS,<br>Kotlin,Python,<br>Python,Swift,LUA</td>
+<td>开源</td>
+<td>是</td>
+<td><p>可以检测项目中复制粘贴和重复开发相同功能等问题，帮助开发者发现冗余代码，以便代码抽象和重构。</p><p></p></td>
+</tr>
+<tr>
+<td><b>统计代码行数</td>
+<td><b>代码统计</td>
+<td>CLOC</td>
+<td>所有语言
+<td>开源</td>
+<td>是</td>
+<td><p>统计代码中各类语言代码行、注释行、空白行的情况。</p><p></p></td>
+</tr>
+</tbody>
+</table>
+
+
 
