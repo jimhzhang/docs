@@ -67,6 +67,8 @@ A：我们将在22年下半年提供“自定义上架工具”满足该需求�
 
 # **附录：各工具详细介绍**
 
+![avatar](https://github.com/jimhzhang/docs/raw/main/FireShot%20Capture%20025%20-%20docs_CodeCC%E4%BB%8B%E7%BB%8D%E6%96%87%E6%A1%A3.md%20at%20main%20%C2%B7%20jimhzhang_docs%20-%20github.com.png)
+
 <table><tbody>
 <tr>
   <td><b>维度</td>
