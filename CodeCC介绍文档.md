@@ -8,54 +8,6 @@ CodeCC（代码检查中心）提供专业的代码检查解决方案，检查�
 
 ![avatar](https://raw.githubusercontent.com/jimhzhang/docs/main/table1.png)
 
-<table><tbody>
-<tr>
-  <td><b>维度</td>
-<td><b>类别</td>
-<td><b>工具示例</td>
-<td><b>规则示例</td>
-  </tr>
-  <td rowspan="3"><b>代码问题<b></td>
-<td><b>发现代码缺陷</td>
-<td>
-<p>Clang、Clangwarning、SpotBugs</p>
-<p><b>预计22年下半年可用：</b></p>
-<p>bkcheck-cpp</p>
-<p><b>需要使用自行采买License：</b></p> Coverity、KLOCWORK</p></td>
-<td>API使用、内存非法访问、程序卡死、资源泄露、空指针、性能低效……</td>
-</tr>
-<tr>
-<td><b>发现安全漏洞</b></td>
-<td><p>啄木鸟敏感信息工具</p><p></p><p><b>需要使用自行采买License：</b></p><p>CheckMarx</p></td>
-<td>凭证泄露、不和谐内容、员工信息泄露等等，支持任意文本内容，不局限于特定编程语言范围</td>
-</tr>
-<tr>
-<td><b>代码规范，检查一些逻辑错误</b></td>
-<td><p>CppLint、CheckStyle、ESLint、StyleCop、Gometalinter、detekt、PHPCS、PyLint、OCCheck、Clangwarning、</p><p><b>预计22年下半年可用：</b>bkcheck-oc、bkcheck-cpp</p><p></p>
-<td>注释、空代码块、异常处理、命名、格式化、风格……</td>
-</tr>
-<tr>
-<td><b>复杂度</b></td>
-<td><b>控制复杂度</td>
-<td>圈复杂度</td>
-<td>函数圈复杂度>=20</td>
-</tr>
-<tr>
-<td><b>重复代码</b></td>
-<td><b>检测重复率</td>
-<td>重复率</td>
-<td>文件代码重复率>=5%</td>
-</tr>
-<tr>
-<td><b>代码统计</b></td>
-<td><b>统计代码行数</td>
-<td>代码统计（CLOC）</td>
-<td>统计代码中各类语言代码行、注释行、空白行的情况</td>
-</tr>
-
-</tbody>
-</table>
-  
 
 # **CodeCC的特色功能**
 **支持五大检查维度：**
