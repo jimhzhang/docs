@@ -6,7 +6,7 @@ CodeCC（代码检查中心）提供专业的代码检查解决方案，检查�
 
 # **CodeCC能解决的问题以及交付后默认支持的工具集**
 
-![avatar](/jimhzhang/docs/table1.png)
+![Aaron Swartz](https://https://raw.githubusercontent.com/jimhzhang/docs/main/table1.png)
 
 <table><tbody>
 <tr>
